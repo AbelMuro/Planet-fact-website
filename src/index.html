@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abel Muro"/>       
+    <meta name="keywords" content="mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, facts, planets"/>
+    <meta name="description" content="website that displays facts about every planet in our solar system"/> 
+    <meta name="theme-color" content="#070724" />   
+    <link rel="manifest" href="/icons/manifest.json"/>                          
+    <title>Planets Fact Website</title>
+</head>
+<body>
+    <noscript>
+        Please enable javascript to use this website
+    </noscript>
+    <div id="root"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register(`/ServiceWorkers.js`).then((registration) => {
+                        console.log('Worker registration is successful', registration.scope);
+                    }, (err) => {
+                        console.log('Worker registration has failed', err);
+                    })
+                });
+        } else 
+                console.log('Service Worker is not supported by your browser.');
+    </script>
+</body>
+</html>

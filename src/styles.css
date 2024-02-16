@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'spartan';
+    src: url('/public/fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'antonio';
+    src: url('/public/fonts/Antonio-VariableFont_wght.ttf');
+}
+
+:root{
+    --spartan: 'spartan';
+    --antonio: 'antonio';
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0px;
+    background-color: #070724;
+    background-image: url('./images/background-stars.svg');
+    background-position: center;
+    background-size: contain;
+}
