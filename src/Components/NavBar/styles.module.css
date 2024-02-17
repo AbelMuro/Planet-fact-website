@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 126px;
 }
 
 .nav_content{
@@ -55,7 +56,6 @@
     position: absolute;
     top: -29px;
     left: 0px; 
-    background-color: #419EBB;
 }
 
 .nav_link:hover + .nav_line{
@@ -109,6 +109,7 @@
 @media(max-width: 840px){
     .nav{
         height: 159px;
+        margin-bottom: 54px;
     }
 
     .nav_content{

@@ -36,7 +36,7 @@
 
 .nav_dropdown{
     height: calc(100vh - 68px);
-    background-color: #070724;
+    background-color: transparent;
     padding: 24px;
     margin: 0px;
 }
@@ -70,14 +70,53 @@
     align-items: center;
 }
 
-.nav_button div{
+.nav_button:hover{
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.nav_button > div{
+    display: flex;
+    gap: 25px;
+}
+
+.nav_button > div::before {
+    content: ' ';
     width: 20px;
     height: 20px;
     border-radius: 100%;
 }
 
-.nav_buttons > li:not(:last-child) .nav_button{
+.nav_button > li{
+    transition: none;
+}
+
+.nav_buttons > li:not(:last-child) > .nav_button{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) 
+}
+
+.nav_buttons > li:nth-of-type(1) > .nav_button > div::before {
+    background-color: #DEF4FC;
+}
+.nav_buttons > li:nth-of-type(2) > .nav_button > div::before {
+    background-color: #F7CC7F;
+}
+.nav_buttons > li:nth-of-type(3) > .nav_button > div::before {
+    background-color: #545BFE;
+}
+.nav_buttons > li:nth-of-type(4) > .nav_button > div::before {
+    background-color: #FF6A45;
+}
+.nav_buttons > li:nth-of-type(5) > .nav_button > div::before {
+    background-color: #ECAD7A;
+}
+.nav_buttons > li:nth-of-type(6) > .nav_button > div::before {
+    background-color: #FCCB6B;
+}
+.nav_buttons > li:nth-of-type(7) > .nav_button > div::before {
+    background-color: #65F0D5;
+}
+.nav_buttons > li:nth-of-type(8) > .nav_button > div::before {
+    background-color: #497EFA;
 }
 
 .arrow{
