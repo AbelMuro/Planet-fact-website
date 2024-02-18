@@ -317,4 +317,9 @@
         letter-spacing: -0.75px;
     }
 
+    .planet_geology{
+        width: 63px;
+        height: 80px;
+        top: 150px
+    }
 }

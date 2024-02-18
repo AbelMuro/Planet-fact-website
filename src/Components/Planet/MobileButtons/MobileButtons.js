@@ -2,8 +2,15 @@ import React, {useEffect} from 'react';
 import styles from './styles.module.css';
 import {useSelector} from 'react-redux';
 
-function MobileButtons() {
+function MobileButtons({setSelectedButton}) {
     const theme = useSelector(state => state.theme);
+
+    const handleClick = (e) => {
+        if(!e.target.matches('button')) return;
+
+        let id = e.target.getAttribute('data-id');
+        setSelectedButton(id)
+    }
 
     const handleEnter = (e) => {
         let line = e.target.nextElementSibling;
@@ -24,21 +31,21 @@ function MobileButtons() {
     }, [theme])
 
     return(
-        <ul className={styles.buttons}>
+        <ul className={styles.buttons} onClick={handleClick}>
             <li>
-                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave} data-id='overview'>
                     overview
                 </button>    
                 <div className={styles.line}></div>            
             </li>
             <li>
-                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave} data-id='structure'>
                     structure
                 </button>       
                 <div className={styles.line}></div>            
             </li>
             <li>
-                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                <button className={styles.button} onMouseEnter={handleEnter} onMouseLeave={handleLeave} data-id='surface'>
                     surface
                 </button>       
                 <div className={styles.line}></div>                 

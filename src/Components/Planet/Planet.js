@@ -11,7 +11,7 @@ function Planet() {
     const selectedPlanet = useSelector(state => state.planet);
     const theme = useSelector(state => state.theme);
     const [planetData, setPlanetData] = useState({});
-    const [selectedButton, setSelectedButton] = useState('01');
+    const [selectedButton, setSelectedButton] = useState('overview');
     const [mobile] = useMediaQuery('(max-width: 600px)');
     const [tablet] = useMediaQuery('(max-width: 840px)');
     const allButtonsRef = useRef();
@@ -21,9 +21,9 @@ function Planet() {
     const setPlanetDesc = () => {
         if(!planetData.overview || !planetData.structure || !planetData.geology) return;
 
-        if(selectedButton === '01')
+        if(selectedButton === 'overview')
             return planetData.overview.content;
-        else if(selectedButton === '02')
+        else if(selectedButton === 'structure')
             return planetData.structure.content;
         else   
             return planetData.geology.content;
@@ -32,9 +32,9 @@ function Planet() {
     const setSourceLink = () => {
         if(!planetData.overview || !planetData.structure || !planetData.geology) return;
 
-        if(selectedButton === '01')
+        if(selectedButton === 'overview')
             return planetData.overview.source;
-        else if(selectedButton === '02')
+        else if(selectedButton === 'structure')
             return planetData.structure.source;
         else   
             return planetData.geology.source;
@@ -59,7 +59,7 @@ function Planet() {
     }, [selectedPlanet])
 
     useEffect(() => {
-        if(selectedButton === '02')
+        if(selectedButton === 'structure')
             planetImageRef.current.style.backgroundImage = `url(${images[selectedPlanet + 'Internal']}`;
         else   
             planetImageRef.current.style.backgroundImage = `url(${images[selectedPlanet]}`;   
@@ -101,10 +101,10 @@ function Planet() {
 
     return(
         <article className={styles.planet}>
-            {mobile && <MobileButtons/>}
+            {mobile && <MobileButtons setSelectedButton={setSelectedButton}/>}
             <section className={styles.planet_content}>
                 <div className={styles.planet_image} ref={planetImageRef}>
-                    {selectedButton === '03' && <img className={styles.planet_geology} src={icons[selectedPlanet]}/>}
+                    {selectedButton === 'surface' && <img className={styles.planet_geology} src={icons[selectedPlanet]}/>}
                 </div>
                 <div className={styles.planet_details}>
                     <h1 className={styles.planet_title}>
@@ -119,19 +119,19 @@ function Planet() {
                         <img className={styles.square_icon} src={icons['linkSquare']}/>
                     </div>
                     {!mobile && <div className={styles.planet_buttons} onClick={handleImage} ref={allButtonsRef}>
-                        <button className={styles.planet_button} data-id='01'>
+                        <button className={styles.planet_button} data-id='overview'>
                             <span>
                                 01
                             </span>
                             overview
                         </button>
-                        <button className={styles.planet_button} data-id='02'>
+                        <button className={styles.planet_button} data-id='structure'>
                             <span>
                                 02
                             </span>
                             internal structure
                         </button>
-                        <button className={styles.planet_button} data-id='03'>
+                        <button className={styles.planet_button} data-id='surface'>
                             <span>
                                 03
                             </span>
