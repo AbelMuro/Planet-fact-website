@@ -38,3 +38,27 @@ body{
     background-position: center;
     background-size: contain;
 }
+
+body::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    content: 
+        url('/public/images/planet-earth-internal.svg')
+        url('/public/images/planet-earth.svg')
+        url('/public/images/planet-jupiter-internal.svg')
+        url('/public/images/planet-jupiter.svg')
+        url('/public/images/planet-mars-internal.svg')
+        url('/public/images/planet-mars.svg')
+        url('/public/images/planet-mercury-internal.svg')
+        url('/public/images/planet-mercury.svg')
+        url('/public/images/planet-neptune-internal.svg')
+        url('/public/images/planet-neptune.svg')
+        url('/public/images/planet-saturn-internal.svg')
+        url('/public/images/planet-saturn.svg')
+        url('/public/images/planet-venus-internal.svg')
+        url('/public/images/planet-venus.svg')
+        url('/public/images/planet-uranus-internal.svg')
+        url('/public/images/planet-uranus.svg')
+}
