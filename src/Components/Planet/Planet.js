@@ -100,11 +100,9 @@ function Planet() {
     }, [mobile, tablet, planetData])
 
     useEffect(() => {
-        console.log(selectedPlanet)
-        if(selectedPlanet !== 'saturn') return;
         if(!planetGeologyImageRef.current) return;
 
-        if(tablet || mobile)
+        if(tablet || mobile || selectedPlanet !== 'saturn')
             planetGeologyImageRef.current.style.bottom = '';   
         else    
             planetGeologyImageRef.current.style.bottom = '20px';
