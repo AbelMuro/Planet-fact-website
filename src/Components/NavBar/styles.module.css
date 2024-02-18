@@ -109,7 +109,7 @@
 @media(max-width: 840px){
     .nav{
         height: 159px;
-        margin-bottom: 54px;
+        margin-bottom: 0px;
     }
 
     .nav_content{
@@ -120,5 +120,12 @@
     .nav_line{
         top: initial;
         bottom: -15px;
+    }
+}
+
+
+@media(max-width: 610px){
+    .nav_links{
+        gap: 30px;
     }
 }

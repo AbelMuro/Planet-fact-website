@@ -165,7 +165,7 @@
 
 @media(max-width: 1200px){
     .planet{
-        width: 95%;
+        width: 90%;
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -177,7 +177,7 @@
 }
 
 
-@media(max-width:840px){
+@media(max-width: 840px){
     .planet{
         gap: 27px;
     }
@@ -265,7 +265,7 @@
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 720px){
     .planet_details{
         grid-template-columns: 300px 1fr;
     }
