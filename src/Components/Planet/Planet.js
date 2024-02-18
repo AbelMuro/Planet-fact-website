@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import MobileButtons from './MobileButtons';
 import styles from './styles.module.css';
-import images from './images';
+import images from '`/public/images';
 import icons from './icons';
 import {useSelector} from 'react-redux';
 import data from './data';

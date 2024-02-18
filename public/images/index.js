@@ -22,6 +22,7 @@ import uranusInternal from './planet-uranus-internal.svg'
 import venus from './planet-venus.svg';
 import venusInternal from './planet-venus-internal.svg'
 
+
 export default {
     earth,
     earthInternal,
