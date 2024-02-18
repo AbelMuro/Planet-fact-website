@@ -100,13 +100,15 @@ function Planet() {
     }, [mobile, tablet, planetData])
 
     useEffect(() => {
+        console.log(selectedPlanet)
         if(selectedPlanet !== 'saturn') return;
         if(!planetGeologyImageRef.current) return;
 
-        if(!tablet && !mobile)
-            planetGeologyImageRef.current.style.bottom = '20px';
+        if(tablet || mobile)
+            planetGeologyImageRef.current.style.bottom = '';   
         else    
-            planetGeologyImageRef.current.style.bottom = '';
+            planetGeologyImageRef.current.style.bottom = '20px';
+
     }, [selectedPlanet, mobile, tablet])
 
     return(
