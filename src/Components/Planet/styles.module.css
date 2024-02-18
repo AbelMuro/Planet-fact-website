@@ -272,8 +272,13 @@
 }
 
 @media(max-width: 600px){
+    .planet{
+        gap: 0px;
+    }
+
     .planet_content{
-        height: auto
+        height: auto;
+        margin-bottom: 28px;
     }
 
     .planet_image{
