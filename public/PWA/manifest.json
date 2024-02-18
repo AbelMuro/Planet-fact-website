@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Galleria",
-    "short_name": "Galleria",
-    "description": "App that displays world-renowned paintings drawn by famous artists",
+    "name": "Planet Fact Website",
+    "short_name": "Planet Facts",
+    "description": "",
     "icons": [
       {
         "src": "./icons/favicon-192x192.png",

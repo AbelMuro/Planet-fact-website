@@ -1,6 +1,13 @@
 @font-face {
     font-family: 'spartan';
-    src: url('/public/fonts/LeagueSpartan-VariableFont_wght.ttf');
+    src: url('/public/fonts/Spartan-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'spartan';
+    src: url('/public/fonts/Spartan-Bold.ttf');
+    font-weight: 700;
 }
 
 @font-face {

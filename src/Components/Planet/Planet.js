@@ -16,6 +16,7 @@ function Planet() {
     const [tablet] = useMediaQuery('(max-width: 840px)');
     const allButtonsRef = useRef();
     const planetImageRef = useRef();
+    const planetGeologyImageRef = useRef();
 
 
     const setPlanetDesc = () => {
@@ -98,6 +99,15 @@ function Planet() {
             
     }, [mobile, tablet, planetData])
 
+    useEffect(() => {
+        if(selectedPlanet !== 'saturn') return;
+        if(!planetGeologyImageRef.current) return;
+
+        if(!tablet && !mobile)
+            planetGeologyImageRef.current.style.bottom = '20px';
+        else    
+            planetGeologyImageRef.current.style.bottom = '';
+    }, [selectedPlanet, mobile, tablet])
 
     return(
         <>
@@ -105,7 +115,7 @@ function Planet() {
             <article className={styles.planet}>
                 <section className={styles.planet_content}>
                     <div className={styles.planet_image} ref={planetImageRef}>
-                        {selectedButton === 'surface' && <img className={styles.planet_geology} src={icons[selectedPlanet]}/>}
+                        {selectedButton === 'surface' && <img className={styles.planet_geology} src={icons[selectedPlanet]} ref={planetGeologyImageRef}/>}
                     </div>
                     <div className={styles.planet_details}>
                         <h1 className={styles.planet_title}>

@@ -106,6 +106,12 @@
     }
 }
 
+@media(max-width: 940px){
+    .nav_links{
+        gap: 20px;
+    }
+}
+
 @media(max-width: 840px){
     .nav{
         height: 159px;
@@ -124,8 +130,8 @@
 }
 
 
-@media(max-width: 610px){
+@media(max-width: 710px){
     .nav_links{
-        gap: 30px;
+        gap: 15px;
     }
 }
