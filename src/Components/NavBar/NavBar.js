@@ -18,7 +18,8 @@ function NavBar(){
     }
 
     useEffect(() => {
-        let lines = document.querySelectorAll('.' + styles.nav_line);
+        let lines = document.querySelectorAll('.' + styles.nav_line)
+
         lines.forEach((line) => {
             line.style.backgroundColor = theme
         })

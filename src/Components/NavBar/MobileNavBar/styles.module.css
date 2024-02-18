@@ -35,6 +35,10 @@
 }
 
 .nav_dropdown{
+    position: absolute;
+    z-index: var(--closest);
+    bottom: 0px;
+    width: 100%;
     height: calc(100vh - 68px);
     background-color: transparent;
     padding: 24px;
@@ -77,6 +81,7 @@
 .nav_button > div{
     display: flex;
     gap: 25px;
+    pointer-events: none;
 }
 
 .nav_button > div::before {
@@ -122,4 +127,5 @@
 .arrow{
     width: 6px;
     height: 8px;
+    pointer-events: none;
 }

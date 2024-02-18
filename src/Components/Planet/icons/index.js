@@ -6,7 +6,7 @@ import mars from './geology-mars.png';
 import mercury from './geology-mercury.png';
 import neptune from './geology-neptune.png';
 import saturn from './geology-saturn.png';
-import uranus from './geology-venus.png';
+import uranus from './geology-uranus.png';
 
 export default {
     linkSquare,
